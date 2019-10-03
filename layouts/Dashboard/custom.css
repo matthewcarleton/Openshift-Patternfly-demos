@@ -1,0 +1,80 @@
+.oc-nav-header {
+    border-bottom: 1px solid #030303;
+    padding: var(--pf-global--spacer--md) var(--pf-global--spacer--sm);
+  }
+  
+  @media screen and (min-width: 768px) {
+    .oc-nav-header {
+      padding-left: var(--pf-global--spacer--md);
+      padding-right: var(--pf-global--spacer--md);
+    }
+  }
+  
+  .oc-nav-header__icon {
+    margin-right: var(--pf-global--spacer--sm);
+  }
+  
+  .oc-nav-header .pf-c-dropdown {
+    width: 100%;
+  }
+  
+  .oc-nav-header .pf-c-dropdown.pf-m-expanded .pf-c-dropdown__toggle {
+    background-color: var(--pf-global--BackgroundColor--dark-200);
+  }
+  
+  .oc-nav-header .pf-c-dropdown__menu-item {
+    padding-left: 7px;
+  }
+  
+  .oc-nav-header .pf-c-dropdown__menu-item h1,
+  .oc-nav-header .pf-c-dropdown__toggle h1 {
+    font-size: 16px;
+  }
+  
+  .oc-nav-header .pf-c-dropdown__toggle {
+    font-size: 16px;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .oc-nav-header .pf-c-dropdown__toggle .pf-c-dropdown__toggle-icon {
+    color: var(--pf-global--Color--light-100);
+    font-size: var(--pf-global--FontSize--md);
+    margin-right: 0;
+  }
+  
+  .oc-nav-header .pf-c-dropdown__toggle .pf-c-title {
+    color: var(--pf-global--Color--light-100);
+  }
+  
+  .oc-nav-header .pf-c-dropdown__toggle:before {
+    border: none;
+  }
+
+
+/* dashboard specific styles */
+
+
+    .oc-u-hidden {
+      display: none;
+   } 
+   @media screen and (min-width: 1200px) {
+     .oc-u-visible-on-xl {
+       display: block;
+     }
+   }
+   .oc-utilization-card__body {
+     padding: 0;
+   }
+   .oc-utilization-card__item {
+     padding:var(--pf-global--spacer--md) var(--pf-global--spacer--lg);
+     border-top: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--100);
+    }
+    @media screen and (min-width: 1200px) {
+      .oc-utilization-card__item:nth-last-child(-n+2) {
+        border-bottom: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--100);
+      }
+      .oc-utilization-card__item:nth-child(odd){
+        border-right:var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--100);
+      }
+    }

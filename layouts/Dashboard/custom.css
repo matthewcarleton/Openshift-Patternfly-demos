@@ -62,7 +62,7 @@
    .co-utilization-card__body {
      padding: 0;
    }
-   .co-utilization-card__item { 
+   .co-utilization-card__item:not(:first-child) { 
      border-top: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--100);
     }
     .co-utilization-card__item > * {
@@ -78,6 +78,13 @@
     .co-utilization-card .pf-l-flex.pf-m-column + .pf-l-flex.pf-m-column > * {
       text-align: right;
     }
+    .co-utilization-card__item__chart--times {
+      padding: var(--pf-global--spacer--xs) var(--pf-global--spacer--md) var(--pf-global--spacer--xs) var(--pf-global--spacer--lg);
+    }
+    .co-utilization-card .graph-wrapper {
+      margin: 0;
+      padding: 0;
+    }
     @media screen and (min-width: 1200px) {
       .co-utilization-card__item {
         display: flex;
@@ -89,9 +96,14 @@
       .co-utilization-card__item >*:nth-child(odd) {
         padding: var(--pf-global--spacer--xs) var(--pf-global--spacer--md) var(--pf-global--spacer--xs) var(--pf-global--spacer--lg);
         border-right: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--100);
+        align-items: flex-start;
       }
       .co-utilization-card__item >*:nth-child(even) {
-        padding: var(--pf-global--spacer--xs) var(--pf-global--spacer--lg) var(--pf-global--spacer--xs) var(--pf-global--spacer--md);
+        padding: 0 var(--pf-global--spacer--xs) 0 0;
+        align-items: center;
+      }
+      .co-utilization-card__item .co-utilization-card__item__chart {
+        padding: 0;
       }
       .co-utilization-card .co-u-visible-on-xl {
         display: flex;

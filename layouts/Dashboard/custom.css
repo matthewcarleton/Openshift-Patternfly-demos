@@ -78,7 +78,7 @@
     .co-utilization-card .pf-l-flex.pf-m-column + .pf-l-flex.pf-m-column > * {
       text-align: right;
     }
-    .co-utilization-card__item__chart--times {
+    .co-utilization-card .co-utilization-card__item.co-utilization-card__item__chart--times {
       padding: var(--pf-global--spacer--xs) var(--pf-global--spacer--md) var(--pf-global--spacer--xs) var(--pf-global--spacer--lg);
     }
     .co-utilization-card .graph-wrapper {
@@ -101,9 +101,6 @@
       .co-utilization-card__item >*:nth-child(even) {
         padding: 0 var(--pf-global--spacer--xs) 0 0;
         align-items: center;
-      }
-      .co-utilization-card__item .co-utilization-card__item__chart {
-        padding: 0;
       }
       .co-utilization-card .co-u-visible-on-xl {
         display: flex;

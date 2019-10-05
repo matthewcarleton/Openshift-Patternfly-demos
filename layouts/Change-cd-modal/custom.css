@@ -3,9 +3,14 @@
   .kv-edit-cd__remove-cd-rom {
     align-self: end;
     justify-self: start;
-    /* margin-left: calc(var(--pf-global--gutter) * -1); removes gutter */
     color: var(--pf-global--icon--Color--light);
     border: none;
+  } 
+  @media screen and (min-width: 768px) {
+    .kv-edit-cd__remove-cd-rom {
+      justify-self: end;
+      margin-left: calc(var(--pf-global--gutter) * -1);
+    }
   } 
   .kv-edit-cd__remove-cd-rom:hover, .kv-edit-cd__remove-cd-rom:active, .kv-edit-cd__remove-cd-rom:focus {
     color: var(--pf-global--icon--Color--dark);

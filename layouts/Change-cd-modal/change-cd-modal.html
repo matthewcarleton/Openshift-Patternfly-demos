@@ -85,7 +85,7 @@
         </div>
         <div class="pf-c-backdrop">
             <div class="pf-l-bullseye">
-              <div class="pf-c-modal-box kv-edit-cd pf-m-lg" role="dialog" aria-modal="true" aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description">
+              <div class="pf-c-modal-box kv-edit-cd pf-m-lg" role="dialog" aria-modal="true" aria-labelledby="modal-lg-title">
                 <button class="pf-c-button pf-m-plain" type="button" aria-label="Close dialog">
                   <i class="fas fa-times" aria-hidden="true"></i>
                 </button>
@@ -104,53 +104,50 @@
                </div>
                <form action="" class="pf-c-form pf-l-grid pf-m-gutter">
                <div class="pf-c-form__group pf-m-11-col">
-                  <label class="pf-c-form__label" for="vertical-align-labels-vertical-form-name">
+                  <label class="pf-c-form__label" for="cd-rom-drive-1">
                     <span class="pf-c-form__label-text">Drive 1</span>
                   </label>
                   <div class="pf-c-input-group">
-                      <input class="pf-c-form-control" type="text" id="textInput3" name="textInput3" aria-label="Input with dropdown and button" aria-describedby="inputDropdownButton1">
-                      <button class="pf-c-button pf-m-control" type="button" id="inputDropdownButton1">eject cd</button>
+                      <input class="pf-c-form-control" type="text" id="cd-rom-drive-1" name="textInput3" aria-label="CD in cd-rom drive 1">
+                      <button class="pf-c-button pf-m-control" type="button">Eject cd</button>
                   </div>
                 </div>  
-                <button class="kv-edit-cd__remove-cd-rom pf-c-button pf-m-link pf-m-1-col" type="button" aria-label="remove cd-rom">
-                    <span class="pf-c-button__icon">
-                          <i class="fas fa-minus-circle" aria-hidden="true"></i>
-                    </span>
-                </button>        
-                <div class="kv-edit-cd__grid pf-c-form__group pf-l-grid pf-m-11-col">
+                <button title="remove cd-rom" class="kv-edit-cd__remove-cd-rom pf-m-1-col" type="button" aria-label="remove cd-rom">                 
+                  <i class="fas fa-minus-circle" aria-hidden="true"></i>
+        </button>        
+                <div class="kv-edit-cd__grid pf-c-form__group pf-l-grid pf-m-11-col-on-md">
                     <label class="pf-c-form__label" for="vertical-align-labels-vertical-form-name">
                         <span class="pf-c-form__label-text">Drive 2</span>
                       </label>
-                    <div class="pf-c-form__group pf-m-3-col">
-                        <label class="pf-c-form__label" for="vertical-align-labels-vertical-form-name">
+                    <div class="pf-c-form__group pf-m-3-col-on-md">
+                        <label class="pf-c-form__label" for="media-type">
                           <span class="pf-c-form__label-text" >Media Type</span>
                         </label>
-                        <select class="pf-c-form-control" id="horizontal-form-title" name="horizontal-form-title">        <option value="" selected="">Please choose</option>
-                          <option value="Mr">Mr</option>
-                          <option value="Miss">Miss</option>
-                          <option value="Mrs">Mrs</option>
-                          <option value="Ms">Ms</option>
-                          <option value="Dr">Dr</option>
-                          <option value="Other">Other</option>
+                        <select class="pf-c-form-control" id="media-type" name="horizontal-form-title">        <option value="" selected="">Please choose media type</option>
+                          <option value="Mr">Url</option>
+                          <option value="Miss">Container</option>
+                          <option value="Mrs">Windows guest tools</option>
+                          <option value="Ms">PVC</option>
                   </select>
                     </div>
-                    <div class="pf-c-form__group pf-m-4-col">
-                        <label class="pf-c-form__label" for="vertical-align-labels-vertical-form-name">
+                    <div class="pf-c-form__group pf-m-4-col-on-md">
+                        <label class="pf-c-form__label" for="url">
                           <span class="pf-c-form__label-text" >Url</span>
                         </label>
-                        <input class="pf-c-form-control" type="text" id="vertical-align-labels-vertical-form-name" name="vertical-align-labels-vertical-form-name" required>
+                        <input class="pf-c-form-control" type="text" id="url" name="url" required>
                     </div>
-                    <div class="pf-c-form__group pf-m-2-col">
-                        <label class="pf-c-form__label" for="vertical-align-labels-vertical-form-name">
+                    <div class="pf-c-form__group pf-m-2-col-on-md">
+                        <label class="pf-c-form__label" for="size">
                           <span class="pf-c-form__label-text" >Size (GiB)</span>
                         </label>
-                        <input class="pf-c-form-control" type="text" id="vertical-align-labels-vertical-form-name" name="vertical-align-labels-vertical-form-name" required>
+                        <input class="pf-c-form-control" type="text" id="size" name="size" required>
                     </div>
-                    <div class="pf-c-form__group pf-m-3-col">
-                        <label class="pf-c-form__label" for="vertical-align-labels-vertical-form-name">
+                    <div class="pf-c-form__group pf-m-3-col-on-md">
+                        <label class="pf-c-form__label" for="storage-class">
                           <span class="pf-c-form__label-text" >Storage class</span>
                         </label>
-                        <select class="pf-c-form-control" id="horizontal-form-title" name="horizontal-form-title">        <option value="" selected="">Please choose</option>
+                        <select class="pf-c-form-control" id="storage-class" name="storage-class">        
+                          <option value="" selected="">Please choose a storage class</option>
                           <option value="Mr">Mr</option>
                           <option value="Miss">Miss</option>
                           <option value="Mrs">Mrs</option>
@@ -160,10 +157,13 @@
                   </select>
                     </div>
               </div>
-              <button class="kv-edit-cd__remove-cd-rom pf-c-button pf-m-link pf-m-1-col" type="button" aria-label="remove cd-rom">
-                  <span class="pf-c-button__icon">
+              <button title="remove cd-rom" class="kv-edit-cd__remove-cd-rom pf-m-1-col-on-md" type="button" aria-label="remove cd-rom">                 
                         <i class="fas fa-minus-circle" aria-hidden="true"></i>
-                  </span>
+              </button>
+              <button class="kv-edit-cd__add-cd-rom pf-c-button pf-m-link" type="button">
+                <span class="pf-c-button__icon">
+                      <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                </span> Add CD-ROM
               </button>
             </form>
                 </div>

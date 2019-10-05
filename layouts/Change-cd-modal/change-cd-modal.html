@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit CD-ROM Modal</title>
+    <link rel="stylesheet" href="../../node_modules/@patternfly/patternfly/patternfly.css">
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <div class="pf-c-page" id="page-default-nav-example">
+        <a class="pf-c-skip-to-content pf-c-button pf-m-primary" href="#main-content-page-default-nav-example">
+          Skip to content
+        </a>
+        <header role="banner" class="pf-c-page__header">
+          <div class="pf-c-page__header-brand">
+            <div class="pf-c-page__header-brand-toggle">
+              <button class="pf-c-button pf-m-plain" type="button" id="page-default-nav-example-nav-toggle" aria-label="Global navigation" aria-expanded="true" aria-controls="page-default-nav-example-primary-nav">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+              </button>
+            </div>
+            <a class="pf-c-page__header-brand-link">
+              <img class="pf-c-brand" src="../../assets/images/okd-logo.svg" alt="okd logo">
+            </a>
+          </div>
+          <div class="pf-c-page__header-tools">
+            <div class="pf-c-page__header-tools-group pf-m-icons">
+              <button class="pf-c-button pf-m-plain" type="button" aria-label="application launcher">
+                <i class="fas fa-th"></i>
+              </button>
+              <button class="pf-c-button pf-m-plain" type="button" aria-label="import yaml">
+                <i class="fas fa-plus-circle"></i>
+              </button>
+              <button class="pf-c-button pf-m-plain" type="button" aria-label="help menu">
+                <i class="fas fa-question-circle"></i>
+              </button>
+            </div>
+            <div class="pf-c-page__header-tools-group">
+              <div class="pf-c-dropdown">
+                <button class="pf-c-dropdown__toggle pf-m-mobile pf-m-plain" id="page-default-nav-example-dropdown-kebab-right-aligned-1-button" aria-expanded="false" aria-label="Actions">
+                  <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+                </button>
+                <ul class="pf-c-dropdown__menu pf-m-align-right" aria-labelledby="page-default-nav-example-dropdown-kebab-right-aligned-1-button" hidden>
+                  <li>
+                    <a class="pf-c-dropdown__menu-item" href="#">Link</a>
+                  </li>
+                  <li>
+                    <button class="pf-c-dropdown__menu-item">Action</button>
+                  </li>
+                  <li>
+                    <a class="pf-c-dropdown__menu-item pf-m-disabled" aria-disabled="true" tabindex="-1" href="#">Disabled link</a>
+                  </li>
+                  <li>
+                    <button class="pf-c-dropdown__menu-item" disabled>Disabled action</button>
+                  </li>
+                  <li class="pf-c-divider" role="separator">
+                  </li>
+                  <li>
+                    <a class="pf-c-dropdown__menu-item" href="#">Separated link</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="pf-m-user">
+                <div class="pf-c-dropdown">
+                  <button class="pf-c-dropdown__toggle pf-m-plain" id="page-default-nav-example-dropdown-button" aria-expanded="false">
+                    <span class="pf-c-dropdown__toggle-text">
+                                John Smith
+                    </span>
+                    <i class="fas fa-caret-down pf-c-dropdown__toggle-icon" aria-hidden="true"></i>
+                  </button>
+                  <div class="pf-c-dropdown__menu" hidden>
+                    [Panel contents here]
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <img class="pf-c-avatar" src="../assets/images/img_avatar.svg" alt="Avatar image"> -->
+          </div>
+        </header>
+        <div class="pf-c-page__sidebar pf-m-dark">
+          <div class="pf-c-page__sidebar-body">
+            <nav class="pf-c-nav pf-m-dark" aria-label="Nav"><div class="oc-nav-header"><div data-test-id="perspective-switcher-menu" class="pf-c-dropdown"><button data-test-id="perspective-switcher-toggle" id="pf-toggle-id-1" class="pf-c-dropdown__toggle" type="button" aria-expanded="false" aria-haspopup="true"><span class="pf-c-dropdown__toggle-text"><h1 class="pf-c-title pf-m-md"><span class="oc-nav-header__icon"><svg fill="currentColor" height="1em" width="1em" viewBox="0 0 640 512" aria-hidden="true" role="img" style="vertical-align: -0.125em;"><path d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z" transform=""></path></svg></span>Administrator</h1></span><svg fill="currentColor" height="1em" width="1em" viewBox="0 0 320 512" aria-hidden="true" role="img" class="pf-c-dropdown__toggle-icon" style="vertical-align: -0.125em;"><path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z" transform=""></path></svg></button></div></div><ul class="pf-c-nav__list"><li class="pf-c-nav__item"><a data-component="pf-nav-expandable" class="pf-c-nav__link" id="pf-1569939985039moc8gxeju" href="#" aria-expanded="false">Home<span class="pf-c-nav__toggle"><svg fill="currentColor" height="1em" width="1em" viewBox="0 0 256 512" aria-hidden="true" role="img" style="vertical-align: -0.125em;"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" transform=""></path></svg></span></a><section class="pf-c-nav__subnav" aria-labelledby="pf-1569939985039moc8gxeju"><ul class="pf-c-nav__simple-list"><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/dashboards" aria-current="page">Dashboards</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/cluster/projects">Projects</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/search">Search</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/api-explorer">Explore</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/events">Events</a></li></ul></section></li><li class="pf-c-nav__item"><a data-component="pf-nav-expandable" class="pf-c-nav__link" id="pf-1569939985043zb6ists6uc" href="#" aria-expanded="false">Operators<span class="pf-c-nav__toggle"><svg fill="currentColor" height="1em" width="1em" viewBox="0 0 256 512" aria-hidden="true" role="img" style="vertical-align: -0.125em;"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" transform=""></path></svg></span></a><section class="pf-c-nav__subnav" aria-labelledby="pf-1569939985043zb6ists6uc" hidden=""><ul class="pf-c-nav__simple-list"><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/operatorhub">OperatorHub</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/operators.coreos.com~v1alpha1~ClusterServiceVersion">Installed Operators</a></li></ul></section></li><li class="pf-c-nav__item"><a data-component="pf-nav-expandable" class="pf-c-nav__link" id="pf-1569939985044hc5f5x5rk1m" href="#" aria-expanded="false">Workloads<span class="pf-c-nav__toggle"><svg fill="currentColor" height="1em" width="1em" viewBox="0 0 256 512" aria-hidden="true" role="img" style="vertical-align: -0.125em;"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" transform=""></path></svg></span></a><section class="pf-c-nav__subnav" aria-labelledby="pf-1569939985044hc5f5x5rk1m" hidden=""><ul class="pf-c-nav__simple-list"><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/pods">Pods</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/deployments">Deployments</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/deploymentconfigs">Deployment Configs</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/statefulsets">Stateful Sets</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/secrets">Secrets</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/configmaps">Config Maps</a></li><li class="pf-c-nav__separator" role="separator"></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/cronjobs">Cron Jobs</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/jobs">Jobs</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/daemonsets">Daemon Sets</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/replicasets">Replica Sets</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/replicationcontrollers">Replication Controllers</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/horizontalpodautoscalers">Horizontal Pod Autoscalers</a></li></ul></section></li><li class="pf-c-nav__item"><a data-component="pf-nav-expandable" class="pf-c-nav__link" id="pf-1569939985049yhakxcgfphd" href="#" aria-expanded="false">Networking<span class="pf-c-nav__toggle"><svg fill="currentColor" height="1em" width="1em" viewBox="0 0 256 512" aria-hidden="true" role="img" style="vertical-align: -0.125em;"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" transform=""></path></svg></span></a><section class="pf-c-nav__subnav" aria-labelledby="pf-1569939985049yhakxcgfphd" hidden=""><ul class="pf-c-nav__simple-list"><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/services">Services</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/routes">Routes</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/ingresses">Ingresses</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/networkpolicies">Network Policies</a></li></ul></section></li><li class="pf-c-nav__item"><a data-component="pf-nav-expandable" class="pf-c-nav__link" id="pf-1569939985051inkag9xjipr" href="#" aria-expanded="false">Storage<span class="pf-c-nav__toggle"><svg fill="currentColor" height="1em" width="1em" viewBox="0 0 256 512" aria-hidden="true" role="img" style="vertical-align: -0.125em;"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" transform=""></path></svg></span></a><section class="pf-c-nav__subnav" aria-labelledby="pf-1569939985051inkag9xjipr" hidden=""><ul class="pf-c-nav__simple-list"><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/cluster/persistentvolumes">Persistent Volumes</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/persistentvolumeclaims">Persistent Volume Claims</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/cluster/storageclasses">Storage Classes</a></li></ul></section></li><li class="pf-c-nav__item"><a data-component="pf-nav-expandable" class="pf-c-nav__link" id="pf-1569939985183p5fap6va0o" href="#" aria-expanded="false">Builds<span class="pf-c-nav__toggle"><svg fill="currentColor" height="1em" width="1em" viewBox="0 0 256 512" aria-hidden="true" role="img" style="vertical-align: -0.125em;"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" transform=""></path></svg></span></a><section class="pf-c-nav__subnav" aria-labelledby="pf-1569939985183p5fap6va0o" hidden=""><ul class="pf-c-nav__simple-list"><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/buildconfigs">Build Configs</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/builds">Builds</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/imagestreams">Image Streams</a></li></ul></section></li><li class="pf-c-nav__item"><a data-component="pf-nav-expandable" class="pf-c-nav__link" id="pf-15699399853347oqj1fao9k5" href="#" aria-expanded="false">Monitoring<span class="pf-c-nav__toggle"><svg fill="currentColor" height="1em" width="1em" viewBox="0 0 256 512" aria-hidden="true" role="img" style="vertical-align: -0.125em;"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" transform=""></path></svg></span></a><section class="pf-c-nav__subnav" aria-labelledby="pf-15699399853347oqj1fao9k5" hidden=""><ul class="pf-c-nav__simple-list"><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/monitoring/alerts">Alerting</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/monitoring/query-browser?query0=">Metrics</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link pf-c-nav__link" href="https://grafana-openshift-monitoring.apps.working.oc4" target="_blank" rel="noopener noreferrer">Dashboards<span class="co-external-link"></span></a></li></ul></section></li><li class="pf-c-nav__item"><a data-component="pf-nav-expandable" class="pf-c-nav__link" id="pf-15699399854703r3qt53q11y" href="#" aria-expanded="false">Compute<span class="pf-c-nav__toggle"><svg fill="currentColor" height="1em" width="1em" viewBox="0 0 256 512" aria-hidden="true" role="img" style="vertical-align: -0.125em;"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" transform=""></path></svg></span></a><section class="pf-c-nav__subnav" aria-labelledby="pf-15699399854703r3qt53q11y" hidden=""><ul class="pf-c-nav__simple-list"><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/cluster/nodes">Nodes</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/ns/openshift-machine-api/machine.openshift.io~v1beta1~Machine">Machines</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/ns/openshift-machine-api/machine.openshift.io~v1beta1~MachineSet">Machine Sets</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/ns/openshift-machine-api/autoscaling.openshift.io~v1beta1~MachineAutoscaler">Machine Autoscalers</a></li><li class="pf-c-nav__separator" role="separator"></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/cluster/machineconfiguration.openshift.io~v1~MachineConfig">Machine Configs</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/cluster/machineconfiguration.openshift.io~v1~MachineConfigPool">Machine Config Pools</a></li></ul></section></li><li class="pf-c-nav__item"><a data-component="pf-nav-expandable" class="pf-c-nav__link" id="pf-156993998505452eyibfxc2q" href="#" aria-expanded="false">Administration<span class="pf-c-nav__toggle"><svg fill="currentColor" height="1em" width="1em" viewBox="0 0 256 512" aria-hidden="true" role="img" style="vertical-align: -0.125em;"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" transform=""></path></svg></span></a><section class="pf-c-nav__subnav" aria-labelledby="pf-156993998505452eyibfxc2q" hidden=""><ul class="pf-c-nav__simple-list"><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/settings/cluster">Cluster Settings</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/cluster/namespaces">Namespaces</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/serviceaccounts">Service Accounts</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/roles">Roles</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/rolebindings">Role Bindings</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/resourcequotas">Resource Quotas</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/all-namespaces/limitranges">Limit Ranges</a></li><li class="pf-c-nav__item"><a class="pf-c-nav__link" href="/k8s/cluster/customresourcedefinitions">Custom Resource Definitions</a></li></ul></section></li></ul></nav>
+          </div>
+        </div>
+        <div class="pf-c-backdrop">
+            <div class="pf-l-bullseye">
+              <div class="pf-c-modal-box kv-edit-cd pf-m-lg" role="dialog" aria-modal="true" aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description">
+                <button class="pf-c-button pf-m-plain" type="button" aria-label="Close dialog">
+                  <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+                <h1 class="pf-c-title pf-m-2xl" id="modal-lg-title">
+                  Edit CD-ROMs
+                </h1>
+                <div class="pf-c-modal-box__body">
+                    <div class="kv-edit-cd__alert pf-c-alert pf-m-info pf-m-inline" aria-label="Inline information alert">
+                        <div class="pf-c-alert__icon">
+                          <i class="fas fa-info-circle" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="pf-c-alert__title">
+                          <span class="pf-screen-reader">Restart required:</span>
+                          For these changes to take affect you must restart this virtual machine.
+                        </h4>
+               </div>
+               <form action="" class="pf-c-form pf-l-grid pf-m-gutter">
+               <div class="pf-c-form__group pf-m-11-col">
+                  <label class="pf-c-form__label" for="vertical-align-labels-vertical-form-name">
+                    <span class="pf-c-form__label-text">Drive 1</span>
+                  </label>
+                  <div class="pf-c-input-group">
+                      <input class="pf-c-form-control" type="text" id="textInput3" name="textInput3" aria-label="Input with dropdown and button" aria-describedby="inputDropdownButton1">
+                      <button class="pf-c-button pf-m-control" type="button" id="inputDropdownButton1">eject cd</button>
+                  </div>
+                </div>  
+                <button class="kv-edit-cd__remove-cd-rom pf-c-button pf-m-link pf-m-1-col" type="button" aria-label="remove cd-rom">
+                    <span class="pf-c-button__icon">
+                          <i class="fas fa-minus-circle" aria-hidden="true"></i>
+                    </span>
+                </button>        
+                <div class="kv-edit-cd__grid pf-c-form__group pf-l-grid pf-m-11-col">
+                    <label class="pf-c-form__label" for="vertical-align-labels-vertical-form-name">
+                        <span class="pf-c-form__label-text">Drive 2</span>
+                      </label>
+                    <div class="pf-c-form__group pf-m-3-col">
+                        <label class="pf-c-form__label" for="vertical-align-labels-vertical-form-name">
+                          <span class="pf-c-form__label-text" >Media Type</span>
+                        </label>
+                        <select class="pf-c-form-control" id="horizontal-form-title" name="horizontal-form-title">        <option value="" selected="">Please choose</option>
+                          <option value="Mr">Mr</option>
+                          <option value="Miss">Miss</option>
+                          <option value="Mrs">Mrs</option>
+                          <option value="Ms">Ms</option>
+                          <option value="Dr">Dr</option>
+                          <option value="Other">Other</option>
+                  </select>
+                    </div>
+                    <div class="pf-c-form__group pf-m-4-col">
+                        <label class="pf-c-form__label" for="vertical-align-labels-vertical-form-name">
+                          <span class="pf-c-form__label-text" >Url</span>
+                        </label>
+                        <input class="pf-c-form-control" type="text" id="vertical-align-labels-vertical-form-name" name="vertical-align-labels-vertical-form-name" required>
+                    </div>
+                    <div class="pf-c-form__group pf-m-2-col">
+                        <label class="pf-c-form__label" for="vertical-align-labels-vertical-form-name">
+                          <span class="pf-c-form__label-text" >Size (GiB)</span>
+                        </label>
+                        <input class="pf-c-form-control" type="text" id="vertical-align-labels-vertical-form-name" name="vertical-align-labels-vertical-form-name" required>
+                    </div>
+                    <div class="pf-c-form__group pf-m-3-col">
+                        <label class="pf-c-form__label" for="vertical-align-labels-vertical-form-name">
+                          <span class="pf-c-form__label-text" >Storage class</span>
+                        </label>
+                        <select class="pf-c-form-control" id="horizontal-form-title" name="horizontal-form-title">        <option value="" selected="">Please choose</option>
+                          <option value="Mr">Mr</option>
+                          <option value="Miss">Miss</option>
+                          <option value="Mrs">Mrs</option>
+                          <option value="Ms">Ms</option>
+                          <option value="Dr">Dr</option>
+                          <option value="Other">Other</option>
+                  </select>
+                    </div>
+              </div>
+              <button class="kv-edit-cd__remove-cd-rom pf-c-button pf-m-link pf-m-1-col" type="button" aria-label="remove cd-rom">
+                  <span class="pf-c-button__icon">
+                        <i class="fas fa-minus-circle" aria-hidden="true"></i>
+                  </span>
+              </button>
+            </form>
+                </div>
+              
+                <footer class="pf-c-modal-box__footer pf-m-align-left">
+                  <button class="pf-c-button pf-m-primary" type="button">
+                    Save
+                  </button>
+                  <button class="pf-c-button pf-m-link" type="button">
+                    Cancel
+                  </button>
+                </footer>
+              </div>
+            </div>
+          </div> 
+        <main role="main" class="pf-c-page__main" tabindex="-1" id="main-content-page-default-nav-example">
+          
+          <section class="pf-c-page__main-section pf-m-light">
+               
+            
+          </section>
+        </main>
+      </div>
+</body>
+</html>

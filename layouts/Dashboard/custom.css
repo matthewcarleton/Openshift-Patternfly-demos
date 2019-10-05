@@ -72,6 +72,9 @@
       color: var(--pf-global--Color--200);
       font-size: var(--pf-global--FontSize--sm);
     }
+    .co-utilization-card__item__text:not(last-child) {
+      margin-right: var(--pf-global--spacer--xs);
+    }
     .co-utilization-card__item .pf-c-title, .co-utilization-card__item .pf-l-flex > * {
       margin-bottom: 0;
     }
@@ -106,4 +109,3 @@
         display: flex;
       }
     }
-    

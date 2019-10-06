@@ -1,111 +1,116 @@
 .co-nav-header {
-    border-bottom: 1px solid #030303;
-    padding: var(--pf-global--spacer--md) var(--pf-global--spacer--sm);
-  }
-  
-  @media screen and (min-width: 768px) {
-    .co-nav-header {
-      padding-left: var(--pf-global--spacer--md);
-      padding-right: var(--pf-global--spacer--md);
-    }
-  }
-  
-  .co-nav-header__icon {
-    margin-right: var(--pf-global--spacer--sm);
-  }
-  
-  .co-nav-header .pf-c-dropdown {
-    width: 100%;
-  }
-  
-  .co-nav-header .pf-c-dropdown.pf-m-expanded .pf-c-dropdown__toggle {
-    background-color: var(--pf-global--BackgroundColor--dark-200);
-  }
-  
-  .co-nav-header .pf-c-dropdown__menu-item {
-    padding-left: 7px;
-  }
-  
-  .co-nav-header .pf-c-dropdown__menu-item h1,
-  .co-nav-header .pf-c-dropdown__toggle h1 {
-    font-size: 16px;
-  }
-  
-  .co-nav-header .pf-c-dropdown__toggle {
-    font-size: 16px;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .co-nav-header .pf-c-dropdown__toggle .pf-c-dropdown__toggle-icon {
-    color: var(--pf-global--Color--light-100);
-    font-size: var(--pf-global--FontSize--md);
-    margin-right: 0;
-  }
-  
-  .co-nav-header .pf-c-dropdown__toggle .pf-c-title {
-    color: var(--pf-global--Color--light-100);
-  }
-  
-  .co-nav-header .pf-c-dropdown__toggle:before {
-    border: none;
-  }
+  border-bottom: 1px solid #030303;
+  padding: var(--pf-global--spacer--md) var(--pf-global--spacer--sm);
+}
 
+@media screen and (min-width: 768px) {
+  .co-nav-header {
+    padding-left: var(--pf-global--spacer--md);
+    padding-right: var(--pf-global--spacer--md);
+  }
+}
 
-/* dashboard specific styles */
+.co-nav-header__icon {
+  margin-right: var(--pf-global--spacer--sm);
+}
 
+.co-nav-header .pf-c-dropdown {
+  width: 100%;
+}
 
+.co-nav-header .pf-c-dropdown.pf-m-expanded .pf-c-dropdown__toggle {
+  background-color: var(--pf-global--BackgroundColor--dark-200);
+}
+
+.co-nav-header .pf-c-dropdown__menu-item {
+  padding-left: 7px;
+}
+
+.co-nav-header .pf-c-dropdown__menu-item h1,
+.co-nav-header .pf-c-dropdown__toggle h1 {
+  font-size: 16px;
+}
+
+.co-nav-header .pf-c-dropdown__toggle {
+  font-size: 16px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.co-nav-header .pf-c-dropdown__toggle .pf-c-dropdown__toggle-icon {
+  color: var(--pf-global--Color--light-100);
+  font-size: var(--pf-global--FontSize--md);
+  margin-right: 0;
+}
+
+.co-nav-header .pf-c-dropdown__toggle .pf-c-title {
+  color: var(--pf-global--Color--light-100);
+}
+
+.co-nav-header .pf-c-dropdown__toggle:before {
+  border: none;
+}
+
+/* Dashboard-specific styles */
 .co-utilization-card .co-u-hidden {
-      display: none;
-   } 
+  display: none;
+}
 
-   .co-utilization-card__body {
-     padding: 0;
-   }
-   .co-utilization-card__item:not(:first-child) { 
-     border-top: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--100);
-    }
-    .co-utilization-card__item > * {
-      padding: var(--pf-global--spacer--md);
-    }
-    .co-utilization-card__item__text {
-      color: var(--pf-global--Color--200);
-      font-size: var(--pf-global--FontSize--sm);
-    }
-    .co-utilization-card__item__text:not(last-child) {
-      margin-right: var(--pf-global--spacer--xs);
-    }
-    .co-utilization-card__item .pf-c-title, .co-utilization-card__item .pf-l-flex > * {
-      margin-bottom: 0;
-    }
-    .co-utilization-card .pf-l-flex.pf-m-column + .pf-l-flex.pf-m-column > * {
-      text-align: right;
-    }
-    .co-utilization-card .co-utilization-card__item.co-utilization-card__item__chart--times {
-      padding: var(--pf-global--spacer--xs) var(--pf-global--spacer--md) var(--pf-global--spacer--xs) var(--pf-global--spacer--lg);
-    }
-    .co-utilization-card .graph-wrapper {
-      margin: 0;
-      padding: 0;
-    }
-    @media screen and (min-width: 1200px) {
-      .co-utilization-card__item {
-        display: flex;
-        justify-content: space-between;
-      }
-      .co-utilization-card__item > *{
-        flex:1 50%; 
-      }
-      .co-utilization-card__item >*:nth-child(odd) {
-        padding: var(--pf-global--spacer--xs) var(--pf-global--spacer--md) var(--pf-global--spacer--xs) var(--pf-global--spacer--lg);
-        border-right: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--100);
-        align-items: flex-start;
-      }
-      .co-utilization-card__item >*:nth-child(even) {
-        padding: 0 var(--pf-global--spacer--xs) 0 0;
-        align-items: center;
-      }
-      .co-utilization-card .co-u-visible-on-xl {
-        display: flex;
-      }
-    }
+.co-utilization-card__item >*:nth-child(odd) {
+  padding: var(--pf-global--spacer--sm) var(--pf-global--spacer--lg) var(--pf-global--spacer--sm) var(--pf-global--spacer--lg);
+}
+
+.co-utilization-card__item {
+  border-top: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--300);
+}
+
+.co-utilization-card__body {
+  padding: 0;
+}
+
+.pf-c-card .pf-c-content {
+  --pf-c-content--small--MarginBottom: initial;
+  --pf-c-content--small--Color: var(--pf-global--Color--200);
+  --pf-c-content--h4--MarginBottom: none;
+}
+
+.co-utilization-card__item__chart {
+  margin: 0 var(--pf-global--spacer--lg) var(--pf-global--spacer--sm) var(--pf-global--spacer--lg);
+}
+
+.co-utilization-card__item__time {
+  margin: 0 var(--pf-global--spacer--lg) 0 var(--pf-global--spacer--lg);
+}
+
+/* Throwaway Demo CSS */
+.co-utilization-card__item__chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ededed;
+  font-size: .8rem;
+  color: #929292;
+}
+
+.co-utilization-card__item:not(:first-child)  {
+  min-height: 61px;
+}
+
+/* Double wide layout */
+@media screen and (min-width: 1200px) {
+  .co-utilization-card .co-u-visible-on-xl {
+    display: flex;
+  }
+  .co-utilization-card__item {
+    display: flex;
+  }
+  .co-utilization-card__item > * {
+    flex: 1 50%;
+  }
+  .co-utilization-card__item > *:nth-child(odd) {
+    border-right: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--100);
+  }
+  .co-utilization-card__item__chart {
+    margin: var(--pf-global--spacer--sm);
+  }
+}

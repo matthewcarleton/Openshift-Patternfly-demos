@@ -11,6 +11,7 @@
     flex: 1 0;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-size: var(--pf-global--FontSize--sm);
 }
 
 .co-utilization-card-popover__consumer-list__value {

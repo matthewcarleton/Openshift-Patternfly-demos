@@ -1,0 +1,27 @@
+/* .oc-utilization-card-popover__dropdown, .oc-utilization-card-popover__dropdown .pf-c-dropdown__toggle {
+    width: 100%;
+} */
+
+.co-utilization-card-popover__consumer-list {
+    margin-top: var(--pf-global--spacer--sm);
+}
+
+.co-utilization-card-popover__consumer-list__item {
+    margin-bottom: var(--pf-global--spacer--sm);
+}
+
+.co-utilization-card-popover__consumer-list__name {
+    overflow: hidden;
+    flex: 1 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.co-utilization-card-popover__consumer-list__value {
+    color: var(--pf-global--Color--200);
+}
+
+.co-utilization-card-popover__consumer-list__button-icon {
+    font-size: var(--pf-global--FontSize--sm);
+    margin-left: var(--pf-global--spacer--xs);
+}

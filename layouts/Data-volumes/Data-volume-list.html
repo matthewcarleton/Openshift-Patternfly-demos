@@ -96,149 +96,19 @@
         </div>
         <main role="main" class="pf-c-page__main" tabindex="-1" id="main-content-page-default-nav-example">
           <section class="pf-c-page__main-section pf-m-light">  
-             <div class="pf-c-content pf-l-level">
-              <h1>Create a Data volume</h1>
-              <a href="">Edit YAML</a>
+                
+            <div class="pf-c-content pf-l-grid">
+                <h1 class="pf-m-12-col">Data volumes</h1> 
+              <button class="pf-c-button pf-m-primary pf-m-2-col" type="button">Create data volume</button>
+              <div class="pf-c-input-group pf-m-3-col pf-m-offset-9-col">
+    <input class="pf-c-form-control" type="search" id="textInput11" name="textInput11" aria-label="Search input example">
+  <button class="pf-c-button pf-m-control" type="button" aria-label="search button for search input">
+        <i class="fas fa-search" aria-hidden="true"></i>
+  </button>
+</div>
              </div>
           </section>
           <section class="pf-c-page__main-section pf-m-light pf-l-grid pf-m-all-8-col">
-          <form novalidate class="pf-c-form">
-  <div class="pf-c-form__group">
-    <label class="pf-c-form__label" for="simple-form-name">
-    <span class="pf-c-form__label-text">Name</span>
-        <span class="pf-c-form__label-required" aria-hidden="true">&#42;</span>
-    </label>   
-    <input class="pf-c-form-control"
-        required type="text" id="simple-form-name" name="simple-form-name" aria-describedby="simple-form-name-helper-1">    
-  </div>
-  
-  <div class="pf-c-form__group">
-      <label class="pf-c-form__label" for="simple-form-number">
-  <span class="pf-c-form__label-text">Access mode</span>
-  <span class="pf-c-form__label-required" aria-hidden="true">&#42;</span>
-  </label> 
-  <select class="pf-c-form-control" id="horizontal-form-title" name="horizontal-form-title">        
-    <option value="" selected="">Please choose</option>              
-    <option value="Mr">Mr</option>              
-    <option value="Miss">Miss</option>              
-    <option value="Mrs">Mrs</option>             
-    <option value="Ms">Ms</option>              
-    <option value="Dr">Dr</option>              
-    <option value="Other">Other</option>      
-  </select>
-</div>
-<div class="pf-c-form__group">
-    <label class="pf-c-form__label" for="simple-form-number">
-<span class="pf-c-form__label-text">Storage Class</span>
-<span class="pf-c-form__label-required" aria-hidden="true">&#42;</span>
-</label> 
-<select class="pf-c-form-control" id="horizontal-form-title" name="horizontal-form-title">        
-  <option value="" selected="">Please choose</option>              
-  <option value="Mr">Mr</option>              
-  <option value="Miss">Miss</option>              
-  <option value="Mrs">Mrs</option>             
-  <option value="Ms">Ms</option>              
-  <option value="Dr">Dr</option>              
-  <option value="Other">Other</option>      
-</select>
-</div>
-<div class="pf-c-form__group">
-    <label class="pf-c-form__label" for="simple-form-number">
-<span class="pf-c-form__label-text">Volume mode</span>
-<span class="pf-c-form__label-required" aria-hidden="true">&#42;</span>
-</label> 
-<select class="pf-c-form-control" id="horizontal-form-title" name="horizontal-form-title">        
-  <option value="" selected="">Please choose</option>              
-  <option value="Mr">Block</option>              
-  <option value="Miss">file</option>    
-</select>
-</div>
-<div class="pf-c-form__group">
-  <label class="pf-c-form__label" for="simple-form-name">
-  <span class="pf-c-form__label-text">Size</span>
-      <span class="pf-c-form__label-required" aria-hidden="true">&#42;</span>
-  </label>   
-  <div class="pf-c-input-group">
-
-<input class="pf-c-form-control"
-    type="text" id="textInput3" name="textInput3" aria-label="Input with dropdown and button" aria-describedby="inputDropdownButton1">
-    <div class="pf-c-dropdown">
-        <button class="pf-c-dropdown__toggle"
-            id="dropdown-example-collapsed1-button"
-            aria-expanded="false">
-              <span class="pf-c-dropdown__toggle-text">
-                      Gi
-              </span>
-            <i class="fas fa-caret-down pf-c-dropdown__toggle-icon" aria-hidden="true"></i></button>
-            <div class="pf-c-dropdown__menu"
-              hidden>
-              [Panel contents here]
-            </div>
-          </div>
-</div>   
-</div>
-  <div class="pf-c-form__group">
-        <label class="pf-c-form__label" for="simple-form-number">
-    <span class="pf-c-form__label-text">Source</span>
-    <span class="pf-c-form__label-required" aria-hidden="true">&#42;</span>
-    </label> 
-    <select class="pf-c-form-control" id="horizontal-form-title" name="horizontal-form-title">        
-      <option value="" selected="">Please choose</option> 
-      <option value="clone">Clone</option>              
-      <option value="import">Import</option>              
-      <option value="upload">Upload</option>                  
-    </select>
-  </div>
-  <!-- <div class="pf-c-form__group">
-      <label class="pf-c-form__label" for="simple-form-name">
-      <span class="pf-c-form__label-text">Clone source</span>
-          <span class="pf-c-form__label-required" aria-hidden="true">&#42;</span>
-      </label>   
-      <select class="pf-c-form-control" id="horizontal-form-title" name="horizontal-form-title">        
-          <option value="" selected="">Please choose</option>              
-          <option value="clone option">clone option</option>              
-        </select> 
-    </div> -->
-  
-  <!-- <div class="pf-c-form__group">
-      <label class="pf-c-form__label" for="simple-form-name">
-      <span class="pf-c-form__label-text">Import source</span>
-          <span class="pf-c-form__label-required" aria-hidden="true">&#42;</span>
-      </label>   
-      <input class="pf-c-form-control"
-          required type="text" id="simple-form-name" name="simple-form-name" aria-describedby="simple-form-name-helper-1">    
-          <p class="pf-c-form__helper-text" id="simple-form-name-helper-1" aria-live="polite">Must be HTTP/HTTPS</p>
-        </div>
-   -->
-  <!-- <div class="pf-c-form__group">
-      <label class="pf-c-form__label" for="simple-form-name">
-      <span class="pf-c-form__label-text">Upload source</span>
-          <span class="pf-c-form__label-required" aria-hidden="true">&#42;</span>
-      </label>   
-      <div class="pf-c-input-group">
-    
-    <input class="pf-c-form-control"
-        type="text" id="textInput3" name="textInput3" aria-label="Input with dropdown and button" aria-describedby="inputDropdownButton1">
-        
-<button class="pf-c-button pf-m-secondary"
-type="button"
->
-Browse
-</button>
-    </div>   
-    </div> -->
-    <div class="pf-c-form__group pf-m-action">
-        <div class="pf-c-form__actions">
-          <button class="pf-c-button pf-m-primary"
-              type="submit">Create
-          </button>
-          <button class="pf-c-button pf-m-secondary"
-              type="button">Cancel
-          </button>
-        </div>
-      </div>
-</form>
-
           </section>
         </main>
       </div>

@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/matthewcarleton/Openshift-Patternfly-demos#readme",
   "dependencies": {
-    "@patternfly/patternfly": "^2.33.5"
+    "@patternfly/patternfly": "^2.36.2"
   }
 }

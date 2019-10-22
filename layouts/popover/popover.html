@@ -94,17 +94,18 @@
                 </button>
                 <h1 class="pf-c-title pf-m-xl" id="popover-right-header">CPU breakdown</h1>
                 <div class="pf-c-popover__body" id="popover-right-body">
-                  <form novalidate class="pf-c-form">
-                      <div class="pf-c-form__group">
-                          <label class="pf-c-form__label" for="consumer-select">
-                            <span class="pf-c-form__label-text">Top CPU consumers</span>
-                          </label>
-                            <select class="pf-c-form-control" id="consumer-select" name="selectConsumerType" aria-label="Select consumer type">
-                              <option selected>By project</option>
-                              <option value="by pod">By Pod</option>
-                            </select>
-                        </div>
-                  </form>
+                  <h2 class="co-utilization-card-popover__title" id="dropdown-title">Top CPU consumers</h2>
+                  <div class="pf-c-dropdown co-utilization-card-popover__dropdown" aria-labelledby="dropdown-title">
+                      <button class="pf-c-dropdown__toggle" id="-button" aria-expanded="false">
+                        <span class="pf-c-dropdown__toggle-text">By project</span>
+                        <i class="fas fa-caret-down pf-c-dropdown__toggle-icon" aria-hidden="true"></i>
+                      </button>
+                      <ul class="pf-c-dropdown__menu" aria-labelledby="-button" hidden>
+                        <li>
+                          <a class="pf-c-dropdown__menu-item" href="#">By pod</a>
+                        </li>         
+                      </ul>
+                    </div>
                   <ul class="co-utilization-card-popover__consumer-list" role="list" aria-label="Pod top CPU consumers">
                     <li class="pf-l-flex pf-m-justify-content-space-between co-utilization-card-popover__consumer-list__item" aria-labelledby="list-item1">
                       <a class="co-utilization-card-popover__consumer-list__name" href="#" id="list-item1">Prometheus-k8s-0Prometheus-k8s-0Prometheus-k8s-0</a>
